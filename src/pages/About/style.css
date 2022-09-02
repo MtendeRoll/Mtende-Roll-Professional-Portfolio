@@ -1,0 +1,38 @@
+.body {
+  position: relative;
+}
+
+hr.solid {
+  border-top: 2px solid #13f4ef;
+}
+#about-title {
+  color: #13f4ef;
+  font-size: 2rem;
+}
+#about-img {
+  width: 20vw;
+  height: auto;
+  float: left;
+  border-radius: 50%;
+  border: 0.1rem solid #13f4ef;
+  margin-right: 0.2rem;
+}
+
+#about-text {
+  text-align: right;
+  margin-right: 1rem;
+  align-self: center;
+  font-weight: lighter;
+  font-size: 1.25em;
+  color: white;
+}
+
+@media screen and (max-width: 640px) {
+  .about img {
+    width: 50vw;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+  }
+}

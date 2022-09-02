@@ -1,0 +1,12 @@
+#userMessage{
+  height: 100px;
+}
+
+.contact button {
+  background-color: #084C61 !important;
+  box-shadow: none;
+}
+
+.contact button:hover, button:focus, button:active {
+  background-color: #0d7797 !important;
+}
