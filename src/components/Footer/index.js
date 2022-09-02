@@ -11,7 +11,7 @@ function Footer(props) {
             <a href="https://github.com/MtendeRoll" rel="noreferrer" target="_blank">
               <i className="fa fa-github fa-lg" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/graham-dickey-a5239a198/">
+            <a href="https://www.linkedin.com/in/mtende-roll/">
               <i className="fa fa-linkedin fa-lg" aria-hidden="true"></i>
             </a>
             <a href="mailto:rollmtende@gmail.com" rel="noreferrer" target="_blank">
