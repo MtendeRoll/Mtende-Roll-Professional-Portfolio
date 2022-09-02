@@ -4,8 +4,7 @@
   left: 0;
   width: 100%;
   height: 20%;
-  border-style: inset;
-  border-color: #13f4ef;
+  border-bottom: inset #13f4ef;
 }
 
 .header-nav {
@@ -23,7 +22,7 @@
 
 .nav-name a {
   display: flex;
-  color: #13f4ef !important;
+  color: #13f4ef;
   margin-left: 5vw;
   padding: 0 1rem;
   font-size: 1.9rem;
@@ -33,7 +32,7 @@
 }
 
 .nav-name :hover {
-  text-shadow: 0.1rem 0.1rem 1rem #fff;
+  text-shadow: 0.1rem 0.1rem 1rem #13f4ef;
   color: white;
   font-weight: bolder;
   text-decoration: none;
@@ -63,7 +62,6 @@
 .nav-items a:hover,
 .nav-items a:active {
   color: #13f4ef;
-  font-weight: bolder;
   text-shadow: 0.1rem 0.1rem 1rem #fff;
 }
 

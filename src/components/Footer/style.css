@@ -1,0 +1,30 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-top: inset #13f4ef;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.footer a {
+  margin: 0 0.25rem;
+}
+
+.fa {
+  color: white;
+}
+
+.fa:hover {
+  color: #13f4ef;
+  text-shadow: 0.1rem 0.1rem 1rem #fff;
+}
+
+.copyright p {
+  letter-spacing: normal;
+  font-size: xx-small !important;
+  color: #d8dbe2;
+  margin-top: 0.2rem;
+}
