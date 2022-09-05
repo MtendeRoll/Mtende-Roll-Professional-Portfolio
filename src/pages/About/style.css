@@ -2,9 +2,6 @@
   position: relative;
 }
 
-hr.solid {
-  border-top: 2px solid #13f4ef;
-}
 #about-title {
   color: #13f4ef;
   font-size: 2rem;
