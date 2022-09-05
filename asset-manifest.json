@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mtende-roll-professional-portfolio/static/css/main.30eb6187.css",
+    "main.js": "/mtende-roll-professional-portfolio/static/js/main.e649423c.js",
+    "static/js/787.5ec2f2a0.chunk.js": "/mtende-roll-professional-portfolio/static/js/787.5ec2f2a0.chunk.js",
+    "static/media/sip-happens.gif": "/mtende-roll-professional-portfolio/static/media/sip-happens.fef045226f335b9bb845.gif",
+    "static/media/workout-zen.gif": "/mtende-roll-professional-portfolio/static/media/workout-zen.230b721b136198cbc4c4.gif",
+    "static/media/weather-watch.gif": "/mtende-roll-professional-portfolio/static/media/weather-watch.cd03250ab597e6c5a4d6.gif",
+    "static/media/mtende-roll-resume.jpg": "/mtende-roll-professional-portfolio/static/media/mtende-roll-resume.7241233d957bfaa98734.jpg",
+    "static/media/mtende-bio-pic.jpg": "/mtende-roll-professional-portfolio/static/media/mtende-bio-pic.6c8ee2ca9fd52779db02.jpg",
+    "static/media/logo192.png": "/mtende-roll-professional-portfolio/static/media/logo192.d7f90698b145df5dba5e.png",
+    "index.html": "/mtende-roll-professional-portfolio/index.html",
+    "main.30eb6187.css.map": "/mtende-roll-professional-portfolio/static/css/main.30eb6187.css.map",
+    "main.e649423c.js.map": "/mtende-roll-professional-portfolio/static/js/main.e649423c.js.map",
+    "787.5ec2f2a0.chunk.js.map": "/mtende-roll-professional-portfolio/static/js/787.5ec2f2a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30eb6187.css",
+    "static/js/main.e649423c.js"
+  ]
+}
