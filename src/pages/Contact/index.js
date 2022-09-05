@@ -1,13 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import { validateEmail } from "../../utils/helpers";
+
 import "./style.css";
 
-function Contact(props) {
+function Contact() {
+  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const { name, email, message } = formState;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!errorMessage) {
+      console.log("Submit Form", formState);
+    }
+  };
+
+  const handleChange = (e) => {
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      if (!isValid) {
+        setErrorMessage("Your email is invalid.");
+      } else {
+        setErrorMessage("");
+      }
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage("");
+      }
+    }
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+      console.log("Handle Form", formState);
+    }
+  };
+
   return (
     <main className="container my-5">
       <div className="row">
-        <div className="content contact col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div className="content contact col-lg-8 col-md-8 col-sm-12 col-xs-12 my-1">
           <div className="row">
-            <header className="ml-2 mt-4 col-md-12">
+            <header className=" mt-4 col-md-12">
               <h3>Contact</h3>
             </header>
           </div>
@@ -19,26 +54,31 @@ function Contact(props) {
           </div>
 
           <div className="row pb-3">
-            <form className="col-lg-12 col-md-12">
+            <form className="col-lg-12 col-md-12" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label for="userName">Name</label>
-                <input type="text" className="form-control" id="userName" placeholder="Trip Flippins" />
+                <label htmlFor="name">Name</label>
+                <input type="text" className="form-control" name="name" defaultValue={name} onBlur={handleChange} placeholder="Type your name" />
               </div>
               <div className="form-group">
-                <label for="userEmail">Email</label>
-                <input type="email" className="form-control" id="userEmail" placeholder="tripflip79@hotmail.net" />
+                <label htmlFor="email">Email</label>
+                <input type="email" className="form-control" name="email" defaultValue={email} onBlur={handleChange} placeholder="typeyour@email.here" />
               </div>
               <div className="form-group">
-                <label for="userMessage">Message</label>
-                <textarea className="form-control" id="userMessage"></textarea>
+                <label htmlFor="message">Message</label>
+                <textarea className="form-control" name="message" defaultValue={message} onBlur={handleChange}></textarea>
               </div>
+              {errorMessage && (
+                <div>
+                  <p className="error-text">{errorMessage}</p>
+                </div>
+              )}
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </form>
           </div>
         </div>
-        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div className="my-5 col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-info">
           <h5>Email</h5>
           <p>rollmtende@gmail.com</p>
           <br />
