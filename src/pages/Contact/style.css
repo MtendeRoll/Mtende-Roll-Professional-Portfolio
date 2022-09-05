@@ -1,12 +1,8 @@
-#userMessage {
-  height: 20%;
-}
-
 .contact-btn {
   color: #13f4ef;
   background-color: white;
   border-color: #13f4ef;
-  text-shadow: 0.1rem 0.1rem 3rem #13f4ef;
+  text-shadow: 0.1rem 0.1rem 1rem #13f4ef;
   font-weight: bolder;
   padding: 0.4rem;
 }
@@ -26,6 +22,14 @@ button:active {
   color: white;
 }
 
-.contact-info {
+.contact a {
+  color: #13f4ef;
+}
+
+.contact a:hover {
   color: white;
+}
+
+.form-input:hover {
+  box-shadow: 0 0 0 5px #13f4ef;
 }
