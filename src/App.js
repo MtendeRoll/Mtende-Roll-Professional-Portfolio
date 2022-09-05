@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-// import Project from "./components/Project";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -19,6 +19,9 @@ function App() {
               </Route>
               <Route exact path={"/about"}>
                 <About />
+              </Route>
+              <Route exact path={"/portfolio"}>
+                <Portfolio />
               </Route>
               <Route exact path={"/contact"}>
                 <Contact />

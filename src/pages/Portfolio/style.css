@@ -1,0 +1,32 @@
+.row h3 {
+  color: white;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.portfolio-title {
+  color: black;
+  font-weight: bold;
+}
+
+.portfolio-text {
+  color: black;
+}
+.portfolio-btn {
+  color: #13f4ef;
+  background-color: white;
+  border-color: #13f4ef;
+  text-shadow: 0.1rem 0.1rem 3rem #13f4ef;
+  font-weight: bolder;
+  box-shadow: 0.1rem 0.1rem 1rem #13f4ef;
+}
+
+.portfolio-btn:hover {
+  color: white;
+  background-color: #13f4ef;
+  border-color: #13f4ef;
+}
+
+.card:hover {
+  box-shadow: 0.1rem 0.1rem 1rem #13f4ef;
+}
