@@ -25,9 +25,7 @@ function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a href="assets/resume/mtende_roll_resume.pdf" download>
-                Resume
-              </a>
+              <Link to="/resume">Resume</Link>
             </li>
           </ul>
         </div>

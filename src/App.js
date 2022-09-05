@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
               </Route>
               <Route exact path={"/contact"}>
                 <Contact />
+              </Route>
+              <Route exact path={"/resume"}>
+                <Resume />
               </Route>
             </Switch>
           </main>

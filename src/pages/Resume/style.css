@@ -1,0 +1,28 @@
+.body {
+  position: relative;
+}
+
+#resume-title {
+  color: #13f4ef;
+  font-size: 2rem;
+}
+
+#resume-title:hover {
+  color: white;
+}
+
+#resume-img {
+  width: 20vw;
+  height: auto;
+  margin-right: 0.2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .resume img {
+    width: 50vw;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+  }
+}
