@@ -2,9 +2,18 @@
   height: 20%;
 }
 
-.contact button {
-  background-color: #13f4ef !important;
-  box-shadow: none;
+.contact-btn {
+  color: #13f4ef;
+  background-color: white;
+  border-color: #13f4ef;
+  text-shadow: 0.1rem 0.1rem 3rem #13f4ef;
+  font-weight: bolder;
+  padding: 0.4rem;
+}
+.contact-btn:hover {
+  color: white;
+  background-color: #13f4ef;
+  border-color: #13f4ef;
 }
 
 .contact button:hover,

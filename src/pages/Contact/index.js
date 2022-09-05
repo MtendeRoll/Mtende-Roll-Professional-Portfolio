@@ -1,91 +1,63 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 import "./style.css";
 
 function Contact() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
 
-  const [errorMessage, setErrorMessage] = useState("");
   const { name, email, message } = formState;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      console.log("Submit Form", formState);
+  const [validated, setValidated] = useState(false);
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
-  };
 
-  const handleChange = (e) => {
-    if (e.target.name === "email") {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage("Your email is invalid.");
-      } else {
-        setErrorMessage("");
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
-      } else {
-        setErrorMessage("");
-      }
-    }
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log("Handle Form", formState);
-    }
+    setValidated(true);
   };
 
   return (
-    <main className="container my-5">
-      <div className="row">
-        <div className="content contact col-lg-8 col-md-8 col-sm-12 col-xs-12 my-1">
-          <div className="row">
-            <header className=" mt-4 col-md-12">
-              <h3>Contact</h3>
-            </header>
+    <main>
+      <h2> Contact Mtende for more information! </h2>
+      <section className="row">
+        <Form noValidate validated={validated} className="col" onSubmit={handleSubmit}>
+          <div className="row mb-3">
+            <Form.Group className="col" controlId="formBasicName">
+              <Form.Label>Name:</Form.Label>
+              <Form.Control required type="name" placeholder="Enter name" defaultValue={name} />
+              <Form.Control.Feedback type="invalid">Please enter your name</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group className="col" controlId="formBasicEmail">
+              <Form.Label>Email address:</Form.Label>
+              <Form.Control required type="email" placeholder="Enter email" defaultValue={email} />
+              <Form.Control.Feedback type="invalid">Please enter your email address</Form.Control.Feedback>
+              <Form.Text className="text-muted">*We'll never share your email with anyone else.</Form.Text>
+            </Form.Group>
           </div>
 
-          <div className="row">
-            <div className="col-md-12">
-              <hr className="solid mx-2" />
-            </div>
-          </div>
+          <Form.Group className="mb-3" controlId="formBasicMessage">
+            <Form.Label>Message:</Form.Label>
+            <Form.Control as="textarea" rows={3} placeholder="Enter message" defaultValue={message} />
+          </Form.Group>
 
-          <div className="row pb-3">
-            <form className="col-lg-12 col-md-12" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" name="name" defaultValue={name} onBlur={handleChange} placeholder="Type your name" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" className="form-control" name="email" defaultValue={email} onBlur={handleChange} placeholder="typeyour@email.here" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea className="form-control" name="message" defaultValue={message} onBlur={handleChange}></textarea>
-              </div>
-              {errorMessage && (
-                <div>
-                  <p className="error-text">{errorMessage}</p>
-                </div>
-              )}
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="my-5 col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-info">
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+        <div className="col">
           <h5>Email</h5>
           <p>rollmtende@gmail.com</p>
           <br />
           <h5>Phone</h5>
           <p>336-524-1701</p>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
