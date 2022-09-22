@@ -57,7 +57,7 @@ GIVEN a single-page application portfolio for a web developer
 ## Links
 
 - [Github Repository](https://github.com/MtendeRoll/mtende-roll-professional-portfolio)
-- [Deployed Application](http://MtendeRoll.github.io/mtende-roll-professional-portfolio)
+- [Deployed Application](https://mtende-roll-portfolio.herokuapp.com/portfolio)
 
 ## Tools Used
 
