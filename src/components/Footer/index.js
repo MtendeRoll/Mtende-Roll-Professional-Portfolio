@@ -5,9 +5,9 @@ import "./style.css";
 function Footer(props) {
   return (
     <footer className="footer">
-      <div className="row">
-        <div className="col-md-12 mt-2 mb-0">
-          <p className="mb-0">
+      <div>
+        <div>
+          <p>
             <a href="https://github.com/MtendeRoll" rel="noreferrer" target="_blank">
               <i className="fa fa-github fa-lg" aria-hidden="true"></i>
             </a>
@@ -21,8 +21,8 @@ function Footer(props) {
         </div>
       </div>
 
-      <div className="row mb-3">
-        <div className="col-md-12 copyright">
+      <div>
+        <div className="copyright">
           <p>
             <i className="fa fa-copyright" aria-hidden="true"></i> Copyright
           </p>
