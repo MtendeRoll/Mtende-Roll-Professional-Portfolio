@@ -9,6 +9,13 @@ function Portfolio() {
   // object that contains the information for each project card
   const projects = [
     {
+      name: "Carbon Footsteps",
+      src: require("../../assets/project_large/carbon-footsteps.gif"),
+      description: "A MERN stack application for an environmentally conscious user to calculate their carbon footprint.",
+      gitHub: "https://github.com/nmsiegel1/carbon-footprint",
+      deployedApp: "https://carbon-footsteps.herokuapp.com/",
+    },
+    {
       name: "Sip Happens",
       src: require("../../assets/project_large/sip-happens.gif"),
       description: "Full stack wine and food pairing application made by a team of four with Express.js, Sequelize and Handlebars",
