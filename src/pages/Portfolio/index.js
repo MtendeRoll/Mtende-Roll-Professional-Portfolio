@@ -67,3 +67,5 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+// update styles
