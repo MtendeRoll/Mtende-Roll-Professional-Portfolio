@@ -1,8 +1,10 @@
-.body {
-  position: relative;
+.about {
+  margin: 2rem;
 }
 
-#about-title {
+.about-title h1 {
+  margin-top: 2rem;
+  text-align: center;
   color: #13f4ef;
   font-size: 2rem;
 }

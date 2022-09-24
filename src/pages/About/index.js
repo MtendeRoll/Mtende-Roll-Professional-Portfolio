@@ -4,9 +4,9 @@ import pic from "./mtende-bio-pic.jpg";
 
 function About(props) {
   return (
-    <section className="mt-5 d-flex flex-column">
-      <div className="w-100 mt-3 text-center">
-        <h1 id="about-title">About Me</h1>
+    <section className="about">
+      <div className="about-title">
+        <h1>About Me</h1>
       </div>
       <div className="d-flex flex-md-nowrap flex-sm-wrap">
         <img className="my-5 mx-5 align-self-center" src={pic} alt="Mtende Roll smiling with a red headwrap and grey long sleeve shirt" style={{ height: "40%" }} id="about-img"></img>
