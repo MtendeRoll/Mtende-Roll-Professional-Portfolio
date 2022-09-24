@@ -1,36 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo192.png";
 
 // function that renders the Header component
 function Header() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
   return (
-    <header className="header">
-      <nav className="header-nav">
-        <img src={logo} alt="animated outline of Mtende's Face" className="nav-logo" />
-        <div className="nav-name">
-          <Link to="/"> Mtende Roll</Link>
-        </div>
-        <div className="spacer"></div>
-        <div className="nav-items mr-5">
+    <nav className="navBar">
+      <a href="/about" className="brand-name">
+        <img src={logo} alt="logo of foot outline with the earth inside of it" className="navLogo" />
+      </a>
+      <button
+        className="hamburger"
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+          setIsMenuClicked(!isMenuClicked);
+        }}
+      ></button>
+      <div className={isNavExpanded ? "menuNav expanded" : "menuNav"}>
+        <div className={isMenuClicked ? "menu-icon-close" : "menu-icon-open"}>
           <ul>
-            <li>
-              <Link to="/react-portfolio">About</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/resume">Resume</Link>
-            </li>
+            <a href="/react-portfolio">
+              <li>About</li>
+            </a>
+            <a href="/portfolio">
+              <li>Portfolio</li>
+            </a>
+            <a href="/contact">
+              <li>Contact</li>
+            </a>
+            <a href="/resume">
+              <li>Resume</li>
+            </a>
           </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
 
