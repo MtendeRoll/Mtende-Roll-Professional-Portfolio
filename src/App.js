@@ -15,6 +15,9 @@ function App() {
           <Header />
           <main style={{ marginTop: "100px" }}>
             <Switch>
+              <Route exact path={"/"}>
+                <About />
+              </Route>
               <Route exact path={"/react-portfolio"}>
                 <About />
               </Route>
