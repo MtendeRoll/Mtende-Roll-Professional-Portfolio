@@ -8,9 +8,13 @@ function About(props) {
       <div className="about-title">
         <h1>About Me</h1>
       </div>
-      <div className="d-flex flex-md-nowrap flex-sm-wrap">
-        <img className="my-5 mx-5 align-self-center" src={pic} alt="Mtende Roll smiling with a red headwrap and grey long sleeve shirt" style={{ height: "40%" }} id="about-img"></img>
-        <p id="about-text">Born and raised in South Africa to Malawian parents, Mtende Roll has been living, working and organizing in North Carolina since the end of 2016. She went back to school to finish her Bachelors of Science in Economics at the illustrious North Carolina Agricultural and Technical State University in 2020. Mtende works as a trainer and organiser with the Racial Equity Institute, she is a small business owner and is in commercial and residential property investing. Outside of that, she is a doula in the efforts to advocate and support birthing people which came from learning about the inequities birthing people experience in hospitals, specifically Black women. Within Alamance County, Mtende has been active in various organisations from volunteering and being on the board of a couple of nonprofits.</p>
+      <div className="about-body">
+        <img className="about-img" src={pic} alt="Mtende Roll smiling with a red headwrap and grey long sleeve shirt" style={{ height: "40%" }}></img>
+        <p className="about-text">
+          Born and raised in South Africa to Malawian parents, Mtende Roll has been living, working and organizing in North Carolina since the end of 2016. She went back to school to finish her Bachelors of Science in Economics at the illustrious North Carolina Agricultural and Technical State University in 2020 and has completed a Fullstack Development Bootcamp at UNC Chapel Hill in 2022.
+          <br />
+          Mtende enjoys creating, building and improving everything she interacts with, from Websites and programs to organisations and communities. She thrives in areas where there is growth and attainable goals.
+        </p>
       </div>
     </section>
   );

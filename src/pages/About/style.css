@@ -2,24 +2,27 @@
   margin: 2rem;
 }
 
+.about-body {
+  margin: 2rem;
+  text-align: center;
+}
 .about-title h1 {
   margin-top: 2rem;
   text-align: center;
   color: #13f4ef;
   font-size: 2rem;
 }
-#about-img {
-  width: 20vw;
+.about-img {
+  width: 15vw;
   height: auto;
-  float: left;
   border-radius: 50%;
   border: 0.1rem solid #13f4ef;
-  margin-right: 0.2rem;
+  margin: 0.2rem;
 }
 
-#about-text {
-  text-align: right;
-  margin-right: 1rem;
+.about-text {
+  text-align: left;
+  margin: 1rem;
   align-self: center;
   font-weight: lighter;
   font-size: 1.25em;
